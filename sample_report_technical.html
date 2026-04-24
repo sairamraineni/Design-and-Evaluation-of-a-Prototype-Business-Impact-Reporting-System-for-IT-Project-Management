@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Technical Report — CRM Platform Upgrade</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #2c2c2a;
+         background: #f9f9f7; padding: 2rem; }
+  .page { max-width: 860px; margin: 0 auto; background: #fff;
+          border: 1px solid #d3d1c7; border-radius: 12px; overflow: hidden; }
+  .header { padding: 28px 32px; border-bottom: 1px solid #e8e6dc; background: #f5f3ed; }
+  .header h1 { font-size: 20px; font-weight: 600; color: #2c2c2a; margin-bottom: 4px; }
+  .header .subtitle { font-size: 12px; color: #888780; }
+  .header .meta { font-size: 12px; color: #5f5e5a; margin-top: 10px; display: flex; gap: 20px; flex-wrap: wrap; }
+  .meta-item span:first-child { color: #888780; margin-right: 4px; }
+  .body { padding: 28px 32px; }
+  h2 { font-size: 13px; font-weight: 600; color: #888780; text-transform: uppercase;
+       letter-spacing: 0.06em; margin: 28px 0 12px; border-bottom: 1px solid #e8e6dc; padding-bottom: 6px; }
+  h2:first-child { margin-top: 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 4px; }
+  th { text-align: left; padding: 8px 10px; background: #f5f3ed; font-weight: 600;
+       color: #5f5e5a; border-bottom: 1px solid #e8e6dc; }
+  td { padding: 8px 10px; border-bottom: 1px solid #f0ede6; color: #3d3d3a; }
+  tr:last-child td { border-bottom: none; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px;
+           border-radius: 20px; text-transform: uppercase; letter-spacing: .04em; }
+  .mono { font-family: 'Courier New', monospace; font-size: 11px; background: #f5f3ed;
+          padding: 1px 5px; border-radius: 3px; }
+  .section-note { font-size: 12px; color: #5f5e5a; margin-bottom: 12px; line-height: 1.6;
+                  background: #f9f9f7; border-radius: 6px; padding: 10px 14px;
+                  border: 1px solid #e8e6dc; }
+  .footer { padding: 16px 32px; border-top: 1px solid #e8e6dc; background: #fafaf8;
+            font-size: 11px; color: #888780; display: flex; justify-content: space-between; }
+  .comparison-note { background: #E6F1FB; border: 1px solid #B5D4F4; border-radius: 8px;
+                     padding: 14px; margin-bottom: 20px; font-size: 12px; color: #0C447C; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <h1>Technical Progress Report</h1>
+    <div class="subtitle">CRM Platform Upgrade</div>
+    <div class="meta">
+      <div class="meta-item"><span>Generated:</span>02 April 2026, 09:27</div>
+      <div class="meta-item"><span>Author:</span>Jane Smith</div>
+      <div class="meta-item"><span>Project manager:</span>Jane Smith</div>
+      <div class="meta-item"><span>Report type:</span>Technical (raw metrics)</div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="comparison-note">
+      This is the <strong>technical report</strong> format, used for dissertation comparison against
+      the business-impact report. It presents raw operational metrics without KPI translation.
+      See the business impact report for the stakeholder-oriented view.
+    </div>
+
+    <h2>Raw technical metrics</h2>
+    <div class="section-note">
+      These metrics are collected directly from project tools (Jira, CI pipeline, timesheets).
+      They represent operational progress data without business context.
+    </div>
+    <table>
+      <thead><tr><th>Metric</th><th>Value</th><th>Unit</th></tr></thead>
+      <tbody>
+        
+        <tr>
+          <td><span class="mono">budget_spent_pct</span></td>
+          <td>47.4</td>
+          <td style="color:#888780">budget spent</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">test_coverage_pct</span></td>
+          <td>77.4</td>
+          <td style="color:#888780">test coverage</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">schedule_variance_days</span></td>
+          <td>-0.7</td>
+          <td style="color:#888780">schedule variance days</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">open_high_risks</span></td>
+          <td>2.7</td>
+          <td style="color:#888780">open high risks</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">open_medium_risks</span></td>
+          <td>2.7</td>
+          <td style="color:#888780">open medium risks</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">milestones_on_time</span></td>
+          <td>2.4</td>
+          <td style="color:#888780">milestones on time</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">total_milestones</span></td>
+          <td>4.0</td>
+          <td style="color:#888780">total milestones</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">bugs_resolved_on_time</span></td>
+          <td>10.3</td>
+          <td style="color:#888780">bugs resolved on time</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">total_bugs</span></td>
+          <td>14.9</td>
+          <td style="color:#888780">total bugs</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">hours_actual</span></td>
+          <td>342.3</td>
+          <td style="color:#888780">hours actual</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">hours_planned</span></td>
+          <td>480.0</td>
+          <td style="color:#888780">hours planned</td>
+        </tr>
+        
+        <tr>
+          <td><span class="mono">planned_duration</span></td>
+          <td>90.0</td>
+          <td style="color:#888780">planned duration</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <h2>Task completion status</h2>
+    <table>
+      <thead><tr><th>Task</th><th>Planned start</th><th>Planned end</th><th>Completion</th><th>Status</th></tr></thead>
+      <tbody>
+        
+        
+        <tr>
+          <td>Requirements Gathering <span class="badge" style="background:#EEEDFE;color:#3C3489">Milestone</span></td>
+          <td>2025-01-15</td>
+          <td>2025-01-31</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="flex:1;height:4px;background:#e8e6dc;border-radius:2px;overflow:hidden">
+                <div style="width:100.0%;height:100%;background:#1D9E75;border-radius:2px;"></div>
+              </div>
+              <span style="font-size:11px;color:#888780;min-width:28px">100%</span>
+            </div>
+          </td>
+          <td>
+            <span class="badge" style="
+              background:#EAF3DE;
+              color:#3B6D11">
+              Completed
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>System Design <span class="badge" style="background:#EEEDFE;color:#3C3489">Milestone</span></td>
+          <td>2025-01-29</td>
+          <td>2025-02-12</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="flex:1;height:4px;background:#e8e6dc;border-radius:2px;overflow:hidden">
+                <div style="width:100.0%;height:100%;background:#1D9E75;border-radius:2px;"></div>
+              </div>
+              <span style="font-size:11px;color:#888780;min-width:28px">100%</span>
+            </div>
+          </td>
+          <td>
+            <span class="badge" style="
+              background:#EAF3DE;
+              color:#3B6D11">
+              Completed
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>Backend Development</td>
+          <td>2025-02-12</td>
+          <td>2025-04-09</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="flex:1;height:4px;background:#e8e6dc;border-radius:2px;overflow:hidden">
+                <div style="width:65.0%;height:100%;background:#378ADD;border-radius:2px;"></div>
+              </div>
+              <span style="font-size:11px;color:#888780;min-width:28px">65%</span>
+            </div>
+          </td>
+          <td>
+            <span class="badge" style="
+              background:#E6F1FB;
+              color:#0C447C">
+              In progress
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>Frontend Development</td>
+          <td>2025-03-12</td>
+          <td>2025-04-23</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="flex:1;height:4px;background:#e8e6dc;border-radius:2px;overflow:hidden">
+                <div style="width:40.0%;height:100%;background:#378ADD;border-radius:2px;"></div>
+              </div>
+              <span style="font-size:11px;color:#888780;min-width:28px">40%</span>
+            </div>
+          </td>
+          <td>
+            <span class="badge" style="
+              background:#E6F1FB;
+              color:#0C447C">
+              In progress
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>QA &amp; Testing</td>
+          <td>2025-04-09</td>
+          <td>2025-05-07</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="flex:1;height:4px;background:#e8e6dc;border-radius:2px;overflow:hidden">
+                <div style="width:0.0%;height:100%;background:#d3d1c7;border-radius:2px;"></div>
+              </div>
+              <span style="font-size:11px;color:#888780;min-width:28px">0%</span>
+            </div>
+          </td>
+          <td>
+            <span class="badge" style="
+              background:#F1EFE8;
+              color:#5F5E5A">
+              Not started
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>User Acceptance Testing <span class="badge" style="background:#EEEDFE;color:#3C3489">Milestone</span></td>
+          <td>2025-04-30</td>
+          <td>2025-05-21</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="flex:1;height:4px;background:#e8e6dc;border-radius:2px;overflow:hidden">
+                <div style="width:0.0%;height:100%;background:#d3d1c7;border-radius:2px;"></div>
+              </div>
+              <span style="font-size:11px;color:#888780;min-width:28px">0%</span>
+            </div>
+          </td>
+          <td>
+            <span class="badge" style="
+              background:#F1EFE8;
+              color:#5F5E5A">
+              Not started
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>Deployment &amp; Go Live <span class="badge" style="background:#EEEDFE;color:#3C3489">Milestone</span></td>
+          <td>2025-05-21</td>
+          <td>2025-05-28</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="flex:1;height:4px;background:#e8e6dc;border-radius:2px;overflow:hidden">
+                <div style="width:0.0%;height:100%;background:#d3d1c7;border-radius:2px;"></div>
+              </div>
+              <span style="font-size:11px;color:#888780;min-width:28px">0%</span>
+            </div>
+          </td>
+          <td>
+            <span class="badge" style="
+              background:#F1EFE8;
+              color:#5F5E5A">
+              Not started
+            </span>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <h2>Risk register</h2>
+    <table>
+      <thead><tr><th>Description</th><th>Probability</th><th>Impact</th><th>Status</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        
+        
+        <tr>
+          <td>Third-party API availability and SLA compliance</td>
+          <td>Medium</td>
+          <td style="color:#854F0B">Medium</td>
+          <td>
+            <span class="badge" style="background:#FAEEDA;
+                                       color:#854F0B">
+              Mitigated
+            </span>
+          </td>
+          <td style="color:#5f5e5a;font-size:11px">Use mock APIs during development; contractual SLA in place</td>
+        </tr>
+        
+        
+        <tr>
+          <td>Scope creep from business stakeholders</td>
+          <td>Medium</td>
+          <td style="color:#A32D2D">High</td>
+          <td>
+            <span class="badge" style="background:#FCEBEB;
+                                       color:#A32D2D">
+              Open
+            </span>
+          </td>
+          <td style="color:#5f5e5a;font-size:11px">Strict change control board; weekly scope review</td>
+        </tr>
+        
+        
+        <tr>
+          <td>Legacy data migration complexity may cause delays</td>
+          <td>High</td>
+          <td style="color:#A32D2D">High</td>
+          <td>
+            <span class="badge" style="background:#FCEBEB;
+                                       color:#A32D2D">
+              Open
+            </span>
+          </td>
+          <td style="color:#5f5e5a;font-size:11px">Allocate dedicated migration sprint; run parallel systems</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <h2>Business impact KPIs (derived)</h2>
+    <div class="section-note">
+      The following KPI values are derived by the mapping engine from the raw metrics above.
+      This section allows direct comparison between technical metrics and their business-oriented equivalents.
+    </div>
+    <table>
+      <thead><tr><th>KPI</th><th>Category</th><th>Computed value</th><th>Target</th><th>Status</th><th>Source metrics</th></tr></thead>
+      <tbody>
+        
+        <tr>
+          <td>Budget Utilisation</td>
+          <td style="color:#888780">Cost</td>
+          <td>47.40 <span style="color:#888780;font-size:11px">percent</span></td>
+          <td>100.00</td>
+          <td>
+            <span class="badge" style="background:#EAF3DE;color:#1D9E75">
+              On track
+            </span>
+          </td>
+          <td style="font-size:11px;color:#5f5e5a">budget_spent_pct</td>
+        </tr>
+        
+        <tr>
+          <td>Resource Efficiency</td>
+          <td style="color:#888780">Cost</td>
+          <td>0.71 <span style="color:#888780;font-size:11px">ratio</span></td>
+          <td>1.00</td>
+          <td>
+            <span class="badge" style="background:#EAF3DE;color:#1D9E75">
+              On track
+            </span>
+          </td>
+          <td style="font-size:11px;color:#5f5e5a">hours_actual</td>
+        </tr>
+        
+        <tr>
+          <td>Defect Resolution Rate</td>
+          <td style="color:#888780">Quality</td>
+          <td>69.13 <span style="color:#888780;font-size:11px">percent</span></td>
+          <td>95.00</td>
+          <td>
+            <span class="badge" style="background:#FAEEDA;color:#BA7517">
+              At risk
+            </span>
+          </td>
+          <td style="font-size:11px;color:#5f5e5a">bugs_resolved_on_time</td>
+        </tr>
+        
+        <tr>
+          <td>Test Coverage</td>
+          <td style="color:#888780">Quality</td>
+          <td>77.40 <span style="color:#888780;font-size:11px">percent</span></td>
+          <td>80.00</td>
+          <td>
+            <span class="badge" style="background:#EAF3DE;color:#1D9E75">
+              On track
+            </span>
+          </td>
+          <td style="font-size:11px;color:#5f5e5a">test_coverage_pct</td>
+        </tr>
+        
+        <tr>
+          <td>Risk Exposure Score</td>
+          <td style="color:#888780">Risk</td>
+          <td>6.30 <span style="color:#888780;font-size:11px">score</span></td>
+          <td>1.00</td>
+          <td>
+            <span class="badge" style="background:#FCEBEB;color:#E24B4A">
+              Off track
+            </span>
+          </td>
+          <td style="font-size:11px;color:#5f5e5a">open_high_risks, open_medium_risks</td>
+        </tr>
+        
+        <tr>
+          <td>Schedule Performance Index</td>
+          <td style="color:#888780">Schedule</td>
+          <td>0.99 <span style="color:#888780;font-size:11px">ratio</span></td>
+          <td>1.00</td>
+          <td>
+            <span class="badge" style="background:#EAF3DE;color:#1D9E75">
+              On track
+            </span>
+          </td>
+          <td style="font-size:11px;color:#5f5e5a">schedule_variance_days</td>
+        </tr>
+        
+        <tr>
+          <td>Milestone Completion Rate</td>
+          <td style="color:#888780">Schedule</td>
+          <td>60.00 <span style="color:#888780;font-size:11px">percent</span></td>
+          <td>100.00</td>
+          <td>
+            <span class="badge" style="background:#FCEBEB;color:#E24B4A">
+              Off track
+            </span>
+          </td>
+          <td style="font-size:11px;color:#5f5e5a">milestones_on_time</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="footer">
+    <span>CRM Platform Upgrade · Technical Report</span>
+    <span>Generated 02 April 2026, 09:27</span>
+  </div>
+</div>
+</body>
+</html>

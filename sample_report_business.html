@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Business Impact Report — CRM Platform Upgrade</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #2c2c2a;
+         background: #f9f9f7; padding: 2rem; }
+  .page { max-width: 860px; margin: 0 auto; background: #fff;
+          border: 1px solid #d3d1c7; border-radius: 12px; overflow: hidden; }
+  .header { padding: 28px 32px; border-bottom: 1px solid #e8e6dc; background: #fafaf8; }
+  .header h1 { font-size: 20px; font-weight: 600; color: #2c2c2a; margin-bottom: 4px; }
+  .header .subtitle { font-size: 12px; color: #888780; }
+  .header .meta { font-size: 12px; color: #5f5e5a; margin-top: 10px; display: flex; gap: 20px; }
+  .meta-item { display: flex; gap: 5px; }
+  .meta-item span:first-child { color: #888780; }
+  .body { padding: 28px 32px; }
+  h2 { font-size: 13px; font-weight: 600; color: #888780; text-transform: uppercase;
+       letter-spacing: 0.06em; margin: 24px 0 12px; border-bottom: 1px solid #e8e6dc; padding-bottom: 6px; }
+  h2:first-child { margin-top: 0; }
+  .exec-summary { font-size: 13px; line-height: 1.75; color: #3d3d3a; background: #f9f9f7;
+                  border-radius: 8px; padding: 16px; border: 1px solid #e8e6dc; margin-bottom: 8px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 4px; }
+  .kpi-card { border: 1px solid #e8e6dc; border-radius: 8px; padding: 14px; }
+  .kpi-card .kpi-label { font-size: 11px; color: #888780; font-weight: 500;
+                         text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+  .kpi-card .kpi-value { font-size: 26px; font-weight: 600; line-height: 1; margin-bottom: 8px; }
+  .kpi-card .kpi-meta { display: flex; justify-content: space-between; align-items: center; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px;
+           border-radius: 20px; text-transform: uppercase; letter-spacing: .04em; }
+  .kpi-card .target { font-size: 11px; color: #888780; }
+  .progress-bar { height: 5px; border-radius: 3px; background: #e8e6dc; margin-top: 8px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 3px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; padding: 8px 10px; background: #f5f3ed; font-weight: 600;
+       color: #5f5e5a; border-bottom: 1px solid #e8e6dc; }
+  td { padding: 8px 10px; border-bottom: 1px solid #f0ede6; color: #3d3d3a; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .risk-high   { color: #A32D2D; }
+  .risk-medium { color: #854F0B; }
+  .risk-low    { color: #3B6D11; }
+  .footer { padding: 16px 32px; border-top: 1px solid #e8e6dc; background: #fafaf8;
+            font-size: 11px; color: #888780; display: flex; justify-content: space-between; }
+  .overall-banner { padding: 14px 20px; border-radius: 8px; margin-bottom: 20px;
+                    display: flex; align-items: center; gap: 14px; }
+  .overall-banner .ob-title { font-size: 15px; font-weight: 600; }
+  .overall-banner .ob-sub   { font-size: 12px; margin-top: 2px; }
+  .stat-row { display: flex; gap: 8px; margin-bottom: 20px; }
+  .stat-box { flex: 1; text-align: center; padding: 12px; border-radius: 8px;
+              background: #f5f3ed; border: 1px solid #e8e6dc; }
+  .stat-box .sv { font-size: 24px; font-weight: 600; }
+  .stat-box .sl { font-size: 11px; color: #888780; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <h1>Business Impact Report</h1>
+    <div class="subtitle">CRM Platform Upgrade</div>
+    <div class="meta">
+      <div class="meta-item"><span>Generated:</span><span>02 April 2026, 09:27</span></div>
+      <div class="meta-item"><span>Author:</span><span>Jane Smith</span></div>
+      <div class="meta-item"><span>Project manager:</span><span>Jane Smith</span></div>
+      <div class="meta-item"><span>Report type:</span><span>Business impact</span></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    
+    <div class="overall-banner" style="background:#FCEBEB; border:1px solid #E24B4A30;">
+      <div>
+        <div class="ob-title" style="color:#E24B4A">
+          Overall: Off track
+        </div>
+        <div class="ob-sub" style="color:#E24B4A">
+          4 on track · 1 at risk · 2 off track
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="sv">57.1%</div>
+        <div class="sl">Project health</div>
+      </div>
+      <div class="stat-box">
+        <div class="sv">2/4</div>
+        <div class="sl">Milestones done</div>
+      </div>
+      <div class="stat-box">
+        <div class="sv">12.0</div>
+        <div class="sl">Risk exposure</div>
+      </div>
+      <div class="stat-box">
+        <div class="sv">Active</div>
+        <div class="sl">Project status</div>
+      </div>
+    </div>
+
+    <h2>Executive summary</h2>
+    <div class="exec-summary">
+      The <strong>CRM Platform Upgrade</strong> project is currently
+      <strong>off track</strong> with a health score of
+      <strong>57.1%</strong>.
+      
+      
+        Budget utilisation stands at <strong>47.4%</strong>
+        against a target of 100.0%,
+        indicating healthy cost control.
+        
+      
+      2 of 4 milestones have been completed.
+      There are 2 open risks,
+      of which 2
+      are rated high impact and require active mitigation.
+    </div>
+
+    <h2>KPI performance</h2>
+    <div class="kpi-grid">
+      
+      <div class="kpi-card">
+        <div class="kpi-label">Budget Utilisation</div>
+        <div class="kpi-value" style="color:#1D9E75">
+          47.40
+          <span style="font-size:14px;font-weight:400;color:#888780"> percent</span>
+        </div>
+        <div class="kpi-meta">
+          <span class="badge" style="background:#EAF3DE;color:#1D9E75">
+            On track
+          </span>
+          <span class="target">Target: 100.00</span>
+        </div>
+        
+        
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:47.4%;background:#1D9E75;"></div>
+        </div>
+        
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-label">Resource Efficiency</div>
+        <div class="kpi-value" style="color:#1D9E75">
+          0.71
+          <span style="font-size:14px;font-weight:400;color:#888780"> ratio</span>
+        </div>
+        <div class="kpi-meta">
+          <span class="badge" style="background:#EAF3DE;color:#1D9E75">
+            On track
+          </span>
+          <span class="target">Target: 1.00</span>
+        </div>
+        
+        
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:71.0%;background:#1D9E75;"></div>
+        </div>
+        
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-label">Defect Resolution Rate</div>
+        <div class="kpi-value" style="color:#BA7517">
+          69.13
+          <span style="font-size:14px;font-weight:400;color:#888780"> percent</span>
+        </div>
+        <div class="kpi-meta">
+          <span class="badge" style="background:#FAEEDA;color:#BA7517">
+            At risk
+          </span>
+          <span class="target">Target: 95.00</span>
+        </div>
+        
+        
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:72.8%;background:#BA7517;"></div>
+        </div>
+        
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-label">Test Coverage</div>
+        <div class="kpi-value" style="color:#1D9E75">
+          77.40
+          <span style="font-size:14px;font-weight:400;color:#888780"> percent</span>
+        </div>
+        <div class="kpi-meta">
+          <span class="badge" style="background:#EAF3DE;color:#1D9E75">
+            On track
+          </span>
+          <span class="target">Target: 80.00</span>
+        </div>
+        
+        
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:96.8%;background:#1D9E75;"></div>
+        </div>
+        
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-label">Risk Exposure Score</div>
+        <div class="kpi-value" style="color:#E24B4A">
+          6.30
+          <span style="font-size:14px;font-weight:400;color:#888780"> score</span>
+        </div>
+        <div class="kpi-meta">
+          <span class="badge" style="background:#FCEBEB;color:#E24B4A">
+            Off track
+          </span>
+          <span class="target">Target: 1.00</span>
+        </div>
+        
+        
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:100%;background:#E24B4A;"></div>
+        </div>
+        
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-label">Schedule Performance Index</div>
+        <div class="kpi-value" style="color:#1D9E75">
+          0.99
+          <span style="font-size:14px;font-weight:400;color:#888780"> ratio</span>
+        </div>
+        <div class="kpi-meta">
+          <span class="badge" style="background:#EAF3DE;color:#1D9E75">
+            On track
+          </span>
+          <span class="target">Target: 1.00</span>
+        </div>
+        
+        
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:99.0%;background:#1D9E75;"></div>
+        </div>
+        
+      </div>
+      
+      <div class="kpi-card">
+        <div class="kpi-label">Milestone Completion Rate</div>
+        <div class="kpi-value" style="color:#E24B4A">
+          60.00
+          <span style="font-size:14px;font-weight:400;color:#888780"> percent</span>
+        </div>
+        <div class="kpi-meta">
+          <span class="badge" style="background:#FCEBEB;color:#E24B4A">
+            Off track
+          </span>
+          <span class="target">Target: 100.00</span>
+        </div>
+        
+        
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:60.0%;background:#E24B4A;"></div>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    <h2>Risk register (open)</h2>
+    <table>
+      <thead>
+        <tr><th>Description</th><th>Probability</th><th>Impact</th><th>Mitigation</th></tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>Scope creep from business stakeholders</td>
+          <td class="risk-medium">Medium</td>
+          <td class="risk-high">High</td>
+          <td style="color:#5f5e5a">Strict change control board; weekly scope review</td>
+        </tr>
+        
+        <tr>
+          <td>Legacy data migration complexity may cause delays</td>
+          <td class="risk-high">High</td>
+          <td class="risk-high">High</td>
+          <td style="color:#5f5e5a">Allocate dedicated migration sprint; run parallel systems</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <h2>Milestone tracker</h2>
+    <table>
+      <thead>
+        <tr><th>Milestone</th><th>Planned end</th><th>Actual end</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        
+        
+        <tr>
+          <td>Requirements Gathering</td>
+          <td>2025-01-31</td>
+          <td>2025-01-31</td>
+          <td>
+            <span class="badge"
+              style="background:#EAF3DE;
+                     color:#3B6D11">
+              Completed
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>System Design</td>
+          <td>2025-02-12</td>
+          <td>2025-02-12</td>
+          <td>
+            <span class="badge"
+              style="background:#EAF3DE;
+                     color:#3B6D11">
+              Completed
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>User Acceptance Testing</td>
+          <td>2025-05-21</td>
+          <td>—</td>
+          <td>
+            <span class="badge"
+              style="background:#F1EFE8;
+                     color:#5F5E5A">
+              Not started
+            </span>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>Deployment &amp; Go Live</td>
+          <td>2025-05-28</td>
+          <td>—</td>
+          <td>
+            <span class="badge"
+              style="background:#F1EFE8;
+                     color:#5F5E5A">
+              Not started
+            </span>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="footer">
+    <span>CRM Platform Upgrade · Business Impact Report</span>
+    <span>Generated 02 April 2026, 09:27</span>
+  </div>
+</div>
+</body>
+</html>
